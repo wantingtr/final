@@ -1,8 +1,8 @@
 {
-    "name": "hux-blog",
-    "title": "Hux Blog",
+    "name": "Wantingtr-blog",
+    "title": "Wantingtr Blog",
     "version": "1.0.0",
-    "homepage": "http://huxpro.github.io",
+    "homepage": "http://wantingtr.githu.io",
     "author": "Hux",
     "devDependencies": {
         "grunt": "~0.4.5",
