@@ -1,2 +1,6 @@
 _site
-README.md
+node_modules
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+*.sh
