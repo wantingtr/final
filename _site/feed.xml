@@ -3,10 +3,10 @@
   <channel>
     <title>Wantingtr Blog</title>
     <description>TRY TO EMBRACE THE WORLD</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 12 Apr 2018 18:57:55 +0800</pubDate>
-    <lastBuildDate>Thu, 12 Apr 2018 18:57:55 +0800</lastBuildDate>
+    <link>http://localhost:8088/</link>
+    <atom:link href="http://localhost:8088/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 12 Apr 2018 19:09:35 +0800</pubDate>
+    <lastBuildDate>Thu, 12 Apr 2018 19:09:35 +0800</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 &lt;p&gt;感觉自己每天都活在信息爆炸的世界，想学点什么东西，还没开始，就会被网上的各种教程和文档弄的眼花缭乱。&lt;br /&gt;
 回过头来一想，似乎时间全部都浪费在找资料，挑资料，看似众多教程雨露均沾，实则什么都没学到。Chrome里面的书签也迅速膨胀，偶尔想来次“断舍离”，几天之后又会恢复成老样子。  &lt;br /&gt;
-&lt;strong&gt;所以，把感觉自己确实需要的资料都放到这来&lt;/strong&gt;
+&lt;strong&gt;所以，把感觉自己确实需要的资料都放到这来&lt;/strong&gt;&lt;br /&gt;
 (陆续增加..)&lt;/p&gt;
 
 &lt;h2 id=&quot;web&quot;&gt;web&lt;/h2&gt;
@@ -25,8 +25,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 09 Apr 2018 05:30:00 +0800</pubDate>
-        <link>http://localhost:4000/2018/04/09/web/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/09/web/</guid>
+        <link>http://localhost:8088/2018/04/09/web/</link>
+        <guid isPermaLink="true">http://localhost:8088/2018/04/09/web/</guid>
         
         <category>前端</category>
         
@@ -157,8 +157,8 @@ TypeScript具备absolutelytyped.org收集类型定义，提供数百个JavaScrip
 &lt;p&gt;TypeScript 正在成为开发大型编码项目的有力工具。因为其面向对象编程语言的结构保持了代码的清洁、一致和简单的调试。因此在应对&lt;strong&gt;大型开发项目时，使用 TypeScript 更加合适&lt;/strong&gt;。如果&lt;strong&gt;有一个相对较小的编码项目，似乎没有必要使用 TypeScript，只需使用灵活的 JavaScript 即可&lt;/strong&gt;。&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 Apr 2018 05:30:00 +0800</pubDate>
-        <link>http://localhost:4000/2018/04/09/typescript-compare/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/04/09/typescript-compare/</guid>
+        <link>http://localhost:8088/2018/04/09/typescript-compare/</link>
+        <guid isPermaLink="true">http://localhost:8088/2018/04/09/typescript-compare/</guid>
         
         <category>前端</category>
         
