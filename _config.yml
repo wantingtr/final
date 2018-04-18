@@ -1,94 +1,94 @@
 # Site settings
-title: Wantingtr Blog
-SEOTitle: Wantingtr的博客 | Wantingtr Blog
-header-img: img/home-bg.jpg    #显示在首页的背景图片
-email: wantin.trg@gmail.com
-description: "TRY TO EMBRACE THE WORLD"
-keyword: "Wantingtr"
-url: "http://wantingtr.github.io"              # your host, for absolute URL
-baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
+title:                      Wantingtr Blog
+SEOTitle:                   Wantingtr的博客 | Wantingtr Blog
+header-img:                 img/home-bg.jpg    #显示在首页的背景图片
+email:                      wantin.trg@gmail.com
+description:                "TRY TO EMBRACE THE WORLD"
+keyword:                    "Wantingtr"
+url:                        "http://wantingtr.github.io"              # your host, for absolute URL
+baseurl:                    ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
 # SNS settings
-RSS: false
-#weibo_username:    wantingtr
-#zhihu_username:    wantingtr
-github_username:    wantingtr
-#twitter_username:  wantingtr
-#facebook_username:  wantingtr
+RSS:                        false
+#weibo_username:            wantingtr
+#zhihu_username:            wantingtr
+github_username:            wantingtr
+#twitter_username:          wantingtr
+#facebook_username:         wantingtr
 
 
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+highlighter:                rouge
+permalink:                  pretty
+paginate:                   10
+exclude:                    ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs:                   true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
-port:    8088
+gems:                       [jekyll-paginate]
+port:                       8088
 
 
 # Markdown settings
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
+# document:                 http://jekyllrb.com/docs/configuration/#kramdown
+markdown:                   kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+  input:                    GFM                            # use Github Flavored Markdown !important
 
 
 
 # Disqus settings
-#disqus_username: _your_disqus_short_name_
+#disqus_username:           _your_disqus_short_name_
 
 # Duoshuo settings 评论系统
-#duoshuo_username: huxblog
+#duoshuo_username:          huxblog
 # Share component is depend on Comment so we can NOT use share only.
-#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+#duoshuo_share:             true                     # set to false if you want to use Comment without Sharing
 
 
 
 
 # Analytics settings 网站统计
 # Baidu Analytics
-#ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+#ba_track_id:               4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 #ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-#ga_domain: huangxuan.me
+#ga_domain:                 huangxuan.me
 
 
 
 # Sidebar settings 侧边栏
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "EMBRACE THE WORLD"
-sidebar-avatar: /img/wantingtr.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar:                    true                           # whether or not using Sidebar.
+sidebar-about-description:  "EMBRACE THE WORLD"
+sidebar-avatar:             /img/wantingtr.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # Featured Tags 标签设置
-featured-tags: false                    # 是否使用首页标签whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-tags:              false                    # 是否使用首页标签whether or not using Feature-Tags
+featured-condition-size:    1              # A tag will be featured if the size of it is more than this condition value
 
 
 
 # Friends 友链
-friends: [
+friends:                    [
     {
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
+        title:              "Hux Blog",
+        href:               "http://huangxuan.me"
     }
 ]
 
 
   #  ,{
-  #      title: "Foo",
-  #      href: "#"
+  #      title:             "Foo",
+  #      href:              "#"
   #  },
