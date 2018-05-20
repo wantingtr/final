@@ -12,7 +12,7 @@ tags:
 
 # Typescript 和 Javascript之间的区别
 
-\------部分资料来自  <a href="https://www.cnblogs.com/langzianan/p/8403332.html">前端阿楠的博客</a>、<a href="https://baijiahao.baidu.com/s?id=1584661822398072586&wfr=spider&for=pc">IT168</a>、<a href="https://www.tslang.cn/">TypeScript官网</a>、《Learning TypeScript》
+------部分资料来自  <a href="https://www.cnblogs.com/langzianan/p/8403332.html">前端阿楠的博客</a>、<a href="https://baijiahao.baidu.com/s?id=1584661822398072586&wfr=spider&for=pc">IT168</a>、<a href="https://www.tslang.cn/">TypeScript官网</a>、《Learning TypeScript》
 
 因为是初学小白，较多资料来自网络和书籍，并且进行了一些整合和修改。如有错误，请多指正。
 
