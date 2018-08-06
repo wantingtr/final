@@ -40,26 +40,27 @@ cartView: function () {
 ```
 
 > 其中
-  then()方法是**异步执行**。
+  then()方法是**异步执行**。  
   就是**当.then()前的方法执行完后再执行then()内部的程序**，避免了数据没获取到等的问题。
-  语法：
-  promise.then(onCompleted, onRejected);
-  Promise 为方法对象。
-  onCompleted必需，为承诺成功完成时要运行的**正确处理程序函数。**
+  语法：  
+  promise.then(onCompleted, onRejected);  
+  Promise 为方法对象.  
+  onCompleted必需，为承诺成功完成时要运行的**正确处理程序函数。**  
   onRejected可选，为承诺被拒绝时要运行的**错误处理程序函数。**
 
 
 
 ## 创建过滤器格式化价格
 
-#### 创建过滤器，通过管道符号改变数据内容  {{ item.productPrice | formatMoney }}
+#### 创建过滤器，通过管道符号改变数据内容  { { item.productPrice | formatMoney } }
 起初，根据教程创建了局部过滤器和全局过滤器，运行时会发现chrome一直报错
 ```
 [Vue warn]: Failed to resolve filter: formatMoney
 
 (found in <Anonymous>)
 ```
-经过不断的尝试和修改，最终发现,出现这种错误应该是因为filter的代码顺序问题。应该**在创建 Vue 实例之前全局定义过滤器**
+经过不断的尝试和修改，最终发现,出现这种错误应该是因为filter的代码顺序问题。  
+应该**在创建 Vue 实例之前全局定义过滤器**
 
 ```js
 Vue.filter("money",function(value,type){
@@ -69,9 +70,9 @@ Vue.filter("money",function(value,type){
 
 其中，Vue 2.0 在过滤器参数格式处
 > 现在过滤器参数形式可以更好地与 js 函数调用方式一致，因此不用再用空格分隔参数：
- `<p>{{ date | formatDate 'YY-MM-DD' timeZone }}</p>``
+ `<p>{ { date | formatDate 'YY-MM-DD' timeZone } }</p>``
 现在用圆括号括起来并用逗号分隔：
-`<p>{{ date | formatDate('YY-MM-DD', timeZone) }}</p>``
+`<p>{ { date | formatDate('YY-MM-DD', timeZone) } }</p>``
 
 
 
