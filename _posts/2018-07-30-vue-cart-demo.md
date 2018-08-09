@@ -8,7 +8,11 @@ tags:
     - 前端
     - Vue.js
 ---
+&nbsp;
 
+根据<a href="https://www.imooc.com/learn/796">慕课网-利用Vue2.0实现购物车和地址选配功能</a>教程，通过利用Vue2.0来实现电商平台的简单功能。
+
+&nbsp;
 ## vue中的`$http`请求服务.
 
 #### 通过调用http服务，对.json文件发送http请求，通过遍历数组数据完成页面渲染
@@ -48,7 +52,7 @@ cartView: function () {
   onRejected可选，为承诺被拒绝时要运行的**错误处理程序函数。**
 
 
-
+&nbsp;
 ## 创建过滤器格式化价格
 
 #### 创建过滤器，通过管道符号改变数据内容   
@@ -76,7 +80,7 @@ Vue.filter("money",function(value,type){
 现在用圆括号括起来并用逗号分隔：  
 `<p>{ { date | formatDate('YY-MM-DD', timeZone) } }</p>`
 
-
+&nbsp;
 ## 通过动态绑定HTML Class，设置商品选择情况
 
 #### 利用`v-bind:class="{'check':item.checked}"`,将item.checked与HTML中的check状态动态绑定。  
@@ -97,7 +101,7 @@ selectProduct:function(item){
   }
 ```
 
-
+&nbsp;
 ## 全选/取消全选按钮：
 
 #### 绑定一个点击函数，若参数为true，就全选，false就取消全选。  
@@ -119,7 +123,7 @@ checkAll:function(flag){
   })
 }
 ```
-
+&nbsp;
 ## 实现商品金额的计算
 
 单个商品的金额计算：`{ { item.productPrice * item.productQuantity | money('元')} }`  
@@ -148,7 +152,7 @@ calTotalPrice:function(){
   });
 }
 ```
-
+&nbsp;
 ## 实现单个商品的删除
 具体要求：点击商品删除按钮，跳转至确认删除界面，点击yes，删除该商品；点击no，返回至上一页。
 
@@ -163,7 +167,7 @@ delProduct:function(){
   this.delFlag = false;
 }
 ```
-
+&nbsp;
 ## 使页面默认显示三个地址卡片
 
 #### 利用计算属性，返回地址列表的前三个，实现地址列表过滤
@@ -184,7 +188,7 @@ computed:{
   }
 }
 ```
-
+&nbsp;
 ## 卡片和配送方式选中
 
 #### 比较每一张地址卡片的index与当前选中的curIndex，若相同，则令check属性为true
@@ -199,7 +203,7 @@ computed:{
 `<li v-bind:class="{'check':shipping == 2}" @click="shipping = 2">`
 
 
-
+&nbsp;
 ## 将当前地址卡片设为默认地址
 
 #### 根据每一个地址的`isDefault`属性，利用`v-if="item.isDefault"`判断。  
@@ -207,6 +211,7 @@ computed:{
 `@click="setDefault(item.addressId)`设为默认地址
 
 对于设置默认地址函数，应对所有地址进行遍历，通过传入的参数（唯一地址名称），寻找到相应的address对象，设置`address.isDefault = true;`
+
 ```js
 setDefault:function(addressId){
   this.addressList.forEach(function(address,index){
@@ -219,15 +224,17 @@ setDefault:function(addressId){
 }
 ```
 
-总结：   
+&nbsp;
+## 总结：   
 1. 无论是商品还是地址的重复渲染，均通过`v-for`指令来遍历所有数据元素。
 2. 利用`v-bind:class="{'checked': condition}" @click='change-condition'` 来实现通过鼠标点击动态改变页面
 3. 引入vue-resource.js，Vue 实例中利用 `this.$http` 调用 http 服务，请求.json文件。
 4. 通过创建过滤器，来格式化价格显示形式。
 
+&nbsp;
 ******
 教程地址：
-<a href="https://www.imooc.com/learn/796">慕课网-利用Vue2.0实现购物车和地址选配功能</a>  
+<a href="https://www.imooc.com/learn/796">慕课网-利用Vue2.0实现购物车和地址选配功能</a>
 
 相关资料参考：
 - <a href="https://cn.vuejs.org/">Vue.js官方文档</a>
