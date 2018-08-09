@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "利用Vue.js2.0实现购物车和地址选配功能"
-#subtitle: "慕课网实战教程实践"
+subtitle: "慕课网实战教程实践"
 date: 2018-07-30 20:00:00
 author: "wantingtr"
 tags:
@@ -9,8 +9,26 @@ tags:
     - Vue.js
 ---
 
-[TOC]
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+	- [vue中的`$http`请求服务.](#vue中的http请求服务)
+			- [通过调用http服务，对.json文件发送http请求，通过遍历数组数据完成页面渲染](#通过调用http服务对json文件发送http请求通过遍历数组数据完成页面渲染)
+	- [创建过滤器格式化价格](#创建过滤器格式化价格)
+			- [创建过滤器，通过管道符号改变数据内容](#创建过滤器通过管道符号改变数据内容)
+	- [通过动态绑定HTML Class，设置商品选择情况](#通过动态绑定html-class设置商品选择情况)
+			- [利用`v-bind:class="{'check':item.checked}"`,将item.checked与HTML中的check状态动态绑定。](#利用v-bindclasscheckitemchecked将itemchecked与html中的check状态动态绑定)
+	- [全选/取消全选按钮：](#全选取消全选按钮)
+			- [绑定一个点击函数，若参数为true，就全选，false就取消全选。](#绑定一个点击函数若参数为true就全选false就取消全选)
+	- [实现商品金额的计算](#实现商品金额的计算)
+	- [实现单个商品的删除](#实现单个商品的删除)
+	- [使页面默认显示三个地址卡片](#使页面默认显示三个地址卡片)
+			- [利用计算属性，返回地址列表的前三个，实现地址列表过滤](#利用计算属性返回地址列表的前三个实现地址列表过滤)
+	- [卡片和配送方式选中](#卡片和配送方式选中)
+			- [比较每一张地址卡片的index与当前选中的curIndex，若相同，则令check属性为true](#比较每一张地址卡片的index与当前选中的curindex若相同则令check属性为true)
+	- [将当前地址卡片设为默认地址](#将当前地址卡片设为默认地址)
+			- [根据每一个地址的`isDefault`属性，利用`v-if="item.isDefault"`判断。](#根据每一个地址的isdefault属性利用v-ifitemisdefault判断)
+
+<!-- /TOC -->
 
 
 ## vue中的`$http`请求服务.
@@ -55,7 +73,8 @@ cartView: function () {
 
 ## 创建过滤器格式化价格
 
-#### 创建过滤器，通过管道符号改变数据内容  { { item.productPrice | formatMoney } }
+#### 创建过滤器，通过管道符号改变数据内容   
+ { { item.productPrice | formatMoney } }
 
 起初，根据教程创建了局部过滤器和全局过滤器，运行时会发现chrome一直报错
 ```
@@ -167,16 +186,72 @@ delProduct:function(){
 }
 ```
 
+## 使页面默认显示三个地址卡片
+
+#### 利用计算属性，返回地址列表的前三个，实现地址列表过滤
+
+要限制页面中加载的数据数量，
+在Vue1.0中，通常使用limitBy过滤器，  
+
+`<p v-for="item in items | limitBy 10">{{ item }}</p>`
+
+在Vue2.0中，在 computed 属性中使用 js 内置方法：`.slice` method：
+
+`<li v-for="(item,index) in filterAddress">`
+
+```js
+computed:{
+  filterAddress:function(){
+    return this.addressList.slice(0,3);
+  }
+}
+```
+
+## 卡片和配送方式选中
+
+#### 比较每一张地址卡片的index与当前选中的curIndex，若相同，则令check属性为true
+
+`<li v-for="(item,index) in filterAddress" v-bind:class="{'check':index == curIndex}" @click="curIndex = index">`
+
+> 在点击某一地址卡片后，会将当前卡片的索引值赋给curIndex，之后选择出`index == curIndex`的那一张卡片，其check属性为true，则完成卡片选中功能。
+
+对于配送方式，也是一样的思路,在Vue实例中的data里，设定一个shipping值，代表着配送方式。  
+当shipping为1时，表示普通配送。当shipping为2时，表示高级配送。  
+`<li v-bind:class="{'check':shipping == 1}" @click="shipping = 1">`  
+`<li v-bind:class="{'check':shipping == 2}" @click="shipping = 2">`
 
 
 
+## 将当前地址卡片设为默认地址
 
+#### 根据每一个地址的`isDefault`属性，利用`v-if="item.isDefault"`判断。  
 
+`@click="setDefault(item.addressId)`设为默认地址
+
+对于设置默认地址函数，应对所有地址进行遍历，通过传入的参数（唯一地址名称），寻找到相应的address对象，设置`address.isDefault = true;`
+```js
+setDefault:function(addressId){
+  this.addressList.forEach(function(address,index){
+    if(address.addressId == addressId){
+      address.isDefault = true;
+    }else{
+      address.isDefault = false;
+    }
+  })
+}
+```
+
+总结：   
+1. 无论是商品还是地址的重复渲染，均通过`v-for`指令来遍历所有数据元素。
+2. 利用`v-bind:class="{'checked': condition}" @click='change-condition'` 来实现通过鼠标点击动态改变页面
+3. 引入vue-resource.js，Vue 实例中利用 `this.$http` 调用 http 服务，请求.json文件。
+4. 通过创建过滤器，来格式化价格显示形式。
 
 ******
 教程地址：
-<a href="https://www.imooc.com/learn/796">慕课网-利用Vue2.0实现购物车和地址选配功能</a>
+<a href="https://www.imooc.com/learn/796">慕课网-利用Vue2.0实现购物车和地址选配功能</a>  
 
 相关资料参考：
 - <a href="https://cn.vuejs.org/">Vue.js官方文档</a>
 - <a href="https://www.jianshu.com/p/ed9e98731d96">在Vue中使用http请求-from简书</a>
+- <a href="https://segmentfault.com/a/1190000008570622">关于Vue实例的生命周期分析</a>
