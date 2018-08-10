@@ -31,10 +31,10 @@ tags:
                v-for="(item,index) in list"
                @delete="deleteItem">
     </todo-item>
-    <!-->
+    <!--
       :content="item"和:index="index"为父组件向子组件传值，这些值都要通过props接收
       @delete为父组件通过父组件中的deleteItem函数，监听子组件中额delete事件。
-    <-->
+    -->
   </ul>
 </div>
 ```
@@ -73,3 +73,4 @@ var app = new Vue({
   }
 })
 ```
+******
