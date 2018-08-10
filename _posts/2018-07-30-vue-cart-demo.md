@@ -231,8 +231,9 @@ setDefault:function(addressId){
 3. 引入vue-resource.js，Vue 实例中利用 `this.$http` 调用 http 服务，请求.json文件。
 4. 通过创建过滤器，来格式化价格显示形式。
 
+
 &nbsp;
-******
+******  
 教程地址：
 <a href="https://www.imooc.com/learn/796">慕课网-利用Vue2.0实现购物车和地址选配功能</a>
 
