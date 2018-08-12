@@ -175,7 +175,7 @@ delProduct:function(){
 要限制页面中加载的数据数量，
 在Vue1.0中，通常使用limitBy过滤器，  
 
-`<p v-for="item in items | limitBy 10">{{ item }}</p>`
+`<p v-for="item in items | limitBy 10">{ { item } }</p>`
 
 在Vue2.0中，在 computed 属性中使用 js 内置方法：`.slice` method：
 
