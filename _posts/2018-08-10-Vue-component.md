@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "关于Vue的组件传值与生命周期"
+title: "关于Vue的组件,生命周期与路由"
 date: 2018-08-10 13:00:00
 author: "wantingtr"
 tags:
@@ -74,11 +74,28 @@ var app = new Vue({
 </div>
 ```
 
+
 ******
 Vue.js的生命周期函数
 
-![lifeCycle](/img/post/vue/lifeCycle.png)
+![lifeCycle](/img/post/vue/lifecycle.png)
 
 &nbsp;
 
 **生命周期函数：Vue实例在某一时间点会自动执行的函数**
+
+&nbsp;
+## 路由
+
+路由就是根据网址的不同，返回不同的内容给用户
+
+> vue-router是Vue.js官方的路由插件，它和vue.js是深度集成的，适合用于构建单页面应用。  
+**vue的单页面应用是基于路由和组件的**，**路由用于设定访问路径，并将路径和组件映射起来。**  
+传统的页面应用，是用一些超链接来实现页面切换和跳转的。  
+在vue-router单页面应用中，则是**路径之间的切换**，也就是**组件的切换。**
+
+在一个vue工程项目文件夹中:
+- `.vue `是一个单文件组件.
+- 路由的配置都放在router这个文件夹下`index.js`里
+- APP是整个应用的根组件
+- `<router-view/>`这个标签显示的内容就是当前路由地址对应的路由内容(即`index.js`里对应的配置项)
