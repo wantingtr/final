@@ -7,8 +7,8 @@ tags:
     - 前端
     - Vue.js
 ---
-&nbsp;
 
+&nbsp;
 ## 父组件向子组件传值：
 `v-bind:content="father-components-data"`  
 **子组件利用props：[...] 接收每一个父组件传过来的值**
