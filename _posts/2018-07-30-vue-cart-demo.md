@@ -56,7 +56,7 @@ cartView: function () {
 ## 创建过滤器格式化价格
 
 #### 创建过滤器，通过管道符号改变数据内容   
- { { item.productPrice | formatMoney } }
+` { { item.productPrice | formatMoney } }`
 
 起初，根据教程创建了局部过滤器和全局过滤器，运行时会发现chrome一直报错
 ```
@@ -233,6 +233,7 @@ setDefault:function(addressId){
 
 
 &nbsp;
+
 ***
 
 教程地址：
