@@ -99,3 +99,9 @@ document.documentElement.style.fontSize = document.documentElement.clientWidth /
 
 })();
 ```
+&nbsp;
+
+相关连接：
+- <a href='https://www.cnblogs.com/dannyxie/p/6640903.html'>一步步教你使用rem适配不同屏幕的移动设备</a>
+- <a href='https://www.cnblogs.com/libaoli/p/5779629.html'>HTML5+CSS3的响应式网页设计：自动适应屏幕宽度</a>
+- <a href = 'http://caibaojian.com/web-app-rem.html'>rem是如何实现自适应布局的？</a>
