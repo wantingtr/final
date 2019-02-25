@@ -7,6 +7,7 @@ author: "wantingtr"
 tags:
     - 前端
     - ElementUI
+    - TypeScript
 ---
 
 最近在做项目的时候遇到在浏览器中上传视频的需求，使用Element-UI的upload组件。具体效果如下
