@@ -48,7 +48,7 @@ console.log(person1.sayName == person2.sayName) //true
 使用原型对象，所有的对象实例会共享原型对象中的实例和方法
 
 
-### __proto__
+## __proto__
 上面说的prototype是每个函数都有的属性，而**__proto__则是每个对象实例都有的属性**，有时也叫也叫`[[Prototype]]`。  
 **在创建对象实例时，自动创建__proto__属性指向原型对象**
 
@@ -131,7 +131,7 @@ console.log(instance.getSuperValue()) //true
 2. 搜索子原型对象`subType.prototype`
 3. 搜索父原型对象`superType.prototype`。
 
-## 加上JS默认对象Object
+### 加上JS默认对象Object
 ![img](/img/post/JS/JSchain.jpg)
 JS中的所有对象都是Object的实例，因此默认原型对象都会包含__proto__指向Object.prototype。
 
