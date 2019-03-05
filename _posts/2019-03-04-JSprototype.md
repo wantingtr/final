@@ -143,6 +143,7 @@ instace instanceof Object  //true
 instace instanceof superType //true
 instace instanceof subType //true
 ``` 
+原理：**判断实例对象的__proto__和构造函数的prototype是不是同一个引用**
 
 ### isPrototypeOf()
 ```js
