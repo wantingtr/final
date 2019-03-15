@@ -125,7 +125,7 @@ var instance = new subType() //实例
 console.log(instance.getSuperValue()) //true
 ```
 
-在前面说过读取属性时，先搜索实例对象，再网上搜索实例原型。  
+在前面说过读取属性时，先搜索实例对象，再往上搜索实例原型。  
 在通过原型链实现继承的情况下，仍然按照上述方法进行搜索：
 1. 搜索实例
 2. 搜索子原型对象`subType.prototype`
