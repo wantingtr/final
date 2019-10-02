@@ -1,0 +1,16 @@
+diff a/about.html b/about.html	(rejected hunks)
+@@ -1,12 +1,7 @@
+----
+-layout: page
+-title: "About"
+-description: "Hey, this is Wantingtr."
+-header-img: "img/home-bg.jpg"
+----
++--- layout: page title: "About" description: "Hey, this is Wantingtr." header-img: "img/home-bg.jpg" ---
+ 
+ <!-- Language Selector -->
+-<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
++<select onchange="onLanChange(this.options[this.options.selectedIndex].value)">
+     <option value="0" selected> 中文 Chinese </option>
+     <option value="1"> 英语 English </option>
+ </select>
